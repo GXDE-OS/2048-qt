@@ -1,0 +1,25 @@
+Description: Don't spawn the 2048-qt window at the center of the screen
+ 2048-qt tries to spawn its main window at the center of the current
+ screen, and does so by setting a few variables in QML. Unfortunately,
+ this has the side effect of forcing the window to remain on the primary
+ screen in a multiscreen setup, overriding whatever the user chooses.
+ This is annoying behaviour for a window that isn't a modal dialog.
+ .
+ As such, remove it.
+Author: Wouter Verhelst <wouter@debian.org>
+Bug-Debian: https://bugs.debian.org/850629
+Last-Update: 2017-04-14
+
+---
+
+--- 2048-qt-0.1.6.orig/qml/main.qml
++++ 2048-qt-0.1.6/qml/main.qml
+@@ -13,9 +13,6 @@ ApplicationWindow {
+     title: qsTr("2048 Game");
+ //    flags: Qt.Window | Qt.WindowTitleHint  | Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint | Qt.CustomizeWindowHint
+ 
+-    x: (Screen.width - width) / 2
+-    y: (Screen.height - height) / 2
+-
+     ExclusiveGroup { id: labelSettingsGroup }
+     ExclusiveGroup { id: languageSettingsGroup }
