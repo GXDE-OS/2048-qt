@@ -4,16 +4,19 @@ Origin: vendor
 
 Fix desktop file adding Keyword tag and remove the execution interpreter 
 
-Index: 2048-qt/res/2048-qt.desktop
+Index: 2048-qt_debian/res/2048-qt.desktop
 ===================================================================
---- 2048-qt.orig/res/2048-qt.desktop
-+++ 2048-qt/res/2048-qt.desktop
-@@ -1,4 +1,3 @@
+--- 2048-qt_debian.orig/res/2048-qt.desktop
++++ 2048-qt_debian/res/2048-qt.desktop
+@@ -1,11 +1,12 @@
 -#!/usr/bin/env xdg-open
  [Desktop Entry]
  Name=2048-Qt
  GenericName=2048-Qt
-@@ -8,4 +7,5 @@ Exec=2048-qt
+ Comment=The 2048 number game implemented in Qt
+ Comment[fr]=Jeu de réflexion et de mathématique
++Comment[de]=Das in QT implementierte 2048-Zahlenspiel
+ Exec=2048-qt
  Icon=2048-qt
  Terminal=false
  Type=Application

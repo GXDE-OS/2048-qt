@@ -1,7 +1,19 @@
+2048-qt (0.1.6-2) unstable; urgency=medium
+
+  * d/control:
+      - Updated Vcs-Git and Vcs-Browser (moved to salsa)
+  * Added German translation to desktop file. (Closes: #781691)
+  * Pushed Standards-Version to latest (4.3.0).
+  * Updated debhelper version to 12~.
+  * Adding hardening option in d/rule.
+  * Added Window patch. (Closes: #850629)
+
+ -- Alejandro Garrido Mota <alejandro@debian.org>  Tue, 09 Apr 2019 18:51:06 +0100
+
 2048-qt (0.1.6-1) unstable; urgency=medium
 
   * New upstream release to unstable. (Closes: #781689)
-  * d/copyright: Update copyright dates and fonts path. 
+  * d/copyright: Update copyright dates and fonts path.
   * Remove d/patches/FixConfigDir.diff, fixed in the new upstrea release.
   * Manpage fixed in the last release. (Closes: #781690)
   * d/2048-qt.manpages: Update manpage path.
@@ -12,10 +24,10 @@
 
 2048-qt (0.1.5-3) experimental; urgency=medium
 
-  * d/control: 
+  * d/control:
       - replace qt5-default metapackage to qtbase5-dev in BDI.
       - Push Standards-Version field.
-  * Set user dir configuration to from ~/.config/xiaoyong/ to 
+  * Set user dir configuration to from ~/.config/xiaoyong/ to
     /.config/2048-qt/ (Closes: #767151).
   * d/rules: export QT_SELECT=qt5 variable to set QT version.
 
